@@ -1,0 +1,293 @@
+{
+	id: "5B6C7D8E9F0A1B2C"
+	group: "331B6409EF6A7840"
+	order_index: 5
+	filename: "chapter_5_ultimate"
+	title: "&f5&r &6ULTIMATE ACHIEVEMENT&r"
+	icon: "mekanism:fission_reactor"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "The Final Frontier"
+			icon: "mekanism:fission_reactor"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"&6YOU HAVE REACHED THE PINNACLE OF AUTOMATION!&r"
+				""
+				"Build the most powerful factory ever conceived."
+				"Your goal: Infinite power, infinite resources, infinite progress."
+			]
+			dependencies: ["251A91F6C21AEAFB"]
+			hide: true
+			size: 3.0d
+			id: "6C7D8E9F0A1B2C3D"
+			tasks: [{
+				id: "7D8E9F0A1B2C3D4E"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "8E9F0A1B2C3D4E5F"
+				type: "item"
+				item: "create:builders_tea"
+				count: 3
+			}]
+		}
+		{
+			title: "Fission Reactor Core"
+			icon: "mekanism:fission_reactor_port"
+			x: -4.0d
+			y: 2.0d
+			shape: "square"
+			subtitle: "Contraption 27"
+			description: [
+				"&cWARNING: EXTREME POWER OUTPUT&r"
+				""
+				"The Fission Reactor produces MASSIVE amounts of RF energy."
+				"Power output: 10,000+ RF/t"
+				""
+				"Requires careful automation and cooling systems."
+			]
+			dependencies: ["6C7D8E9F0A1B2C3D"]
+			id: "7D8E9F0A1B2C3D4E"
+			tasks: [
+				{
+					id: "8E9F0A1B2C3D4E5F"
+					type: "item"
+					item: "mekanism:fission_reactor_port"
+					count: 2
+					consume_items: false
+				}
+				{
+					id: "9F0A1B2C3D4E5F6A"
+					type: "checkmark"
+					title: "Operational"
+				}
+			]
+		}
+		{
+			title: "Supremium Gear Setup"
+			icon: "mysticalagriculture:supremium_gear"
+			x: -2.0d
+			y: 2.0d
+			subtitle: "Contraption 28"
+			description: [
+				"Supremium Gears are the ultimate crafting components."
+				""
+				"Craft using Supremium Essence and Gear bases."
+			]
+			dependencies: ["6C7D8E9F0A1B2C3D"]
+			id: "8E9F0A1B2C3D4E5F"
+			tasks: [
+				{
+					id: "9F0A1B2C3D4E5F6A"
+					type: "item"
+					item: "mysticalagriculture:supremium_gear"
+					consume_items: false
+				}
+				{
+					id: "0A1B2C3D4E5F6A7B"
+					type: "checkmark"
+					title: "Harvesting"
+				}
+			]
+		}
+		{
+			title: "Mechanical Extruder Mastery"
+			icon: "create_mechanical_extruder:extruder"
+			x: 0.0d
+			y: 2.0d
+			shape: "circle"
+			description: [
+				"The Mechanical Extruder creates blocks from fluids at extreme scale."
+				""
+				"With P2P tunnels, pipe thousands of materials simultaneously!"
+			]
+			dependencies: ["6C7D8E9F0A1B2C3D"]
+			id: "9F0A1B2C3D4E5F6A"
+			tasks: [
+				{
+					id: "0A1B2C3D4E5F6A7B"
+					type: "item"
+					item: "create_mechanical_extruder:extruder"
+					consume_items: false
+				}
+				{
+					id: "1B2C3D4E5F6A7B8C"
+					type: "checkmark"
+					title: "Extruding"
+				}
+			]
+		}
+		{
+			title: "P2P Network Expansion"
+			icon: "appliedenergistics2:me_p2p_tunnel"
+			x: 2.0d
+			y: 2.0d
+			shape: "circle"
+			description: [
+				"Expand your ME Network with thousands of P2P tunnels."
+				""
+				"Create a completely organized, compact network."
+			]
+			dependencies: ["6C7D8E9F0A1B2C3D"]
+			id: "0A1B2C3D4E5F6A7B"
+			tasks: [
+				{
+					id: "1B2C3D4E5F6A7B8C"
+					type: "item"
+					item: "appliedenergistics2:me_p2p_tunnel"
+					count: 64
+					consume_items: false
+				}
+				{
+					id: "2C3D4E5F6A7B8C9D"
+					type: "checkmark"
+					title: "Networked"
+				}
+			]
+		}
+		{
+			title: "Mystical Agriculture Supremium Essence Farm"
+			icon: "mysticalagriculture:supremium_essence"
+			x: 4.0d
+			y: 2.0d
+			shape: "square"
+			subtitle: "Contraption 29"
+			description: [
+				"Harvest Supremium Essence infinitely using automated farms."
+				""
+				"Each harvester produces massive quantities."
+			]
+			dependencies: ["6C7D8E9F0A1B2C3D"]
+			id: "1B2C3D4E5F6A7B8C"
+			tasks: [
+				{
+					id: "2C3D4E5F6A7B8C9D"
+					type: "item"
+					item: "mysticalagriculture:supremium_essence"
+					count: 64
+					consume_items: false
+				}
+				{
+					id: "3D4E5F6A7B8C9D0E"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Quantum Computer Network"
+			icon: "appliedenergistics2:quantum_link_chamber"
+			x: -2.0d
+			y: 5.0d
+			subtitle: "Contraption 30"
+			description: [
+				"Connect distant ME Networks using Quantum Links."
+				""
+				"Your base now functions as a unified mega-network!"
+			]
+			dependencies: [
+				"7D8E9F0A1B2C3D4E"
+				"0A1B2C3D4E5F6A7B"
+			]
+			id: "2C3D4E5F6A7B8C9D"
+			tasks: [
+				{
+					id: "3D4E5F6A7B8C9D0E"
+					type: "item"
+					item: "appliedenergistics2:quantum_link_chamber"
+					consume_items: false
+				}
+				{
+					id: "4E5F6A7B8C9D0E1F"
+					type: "checkmark"
+					title: "Synchronized"
+				}
+			]
+		}
+		{
+			title: "Infinity Crafting System"
+			icon: "appliedenergistics2:molecular_assembler"
+			x: 0.0d
+			y: 5.0d
+			shape: "square"
+			subtitle: "Contraption 31"
+			description: [
+				"With unlimited power and resources, your Molecular Assemblers produce ANYTHING instantly."
+				""
+				"Your factory has achieved true infinity!"
+			]
+			dependencies: [
+				"8E9F0A1B2C3D4E5F"
+				"1B2C3D4E5F6A7B8C"
+			]
+			id: "3D4E5F6A7B8C9D0E"
+			tasks: [
+				{
+					id: "4E5F6A7B8C9D0E1F"
+					type: "item"
+					item: "appliedenergistics2:molecular_assembler"
+					count: 8
+					consume_items: false
+				}
+				{
+					id: "5F6A7B8C9D0E1F2A"
+					type: "checkmark"
+					title: "Crafting Everything"
+				}
+			]
+		}
+		{
+			title: "&6ULTIMATE VICTORY&r"
+			x: 0.0d
+			y: 8.0d
+			shape: "hexagon"
+			description: [
+				"&6YOU HAVE CONQUERED MINECRAFT!&r"
+				""
+				"Your factory operates at maximum capacity:"
+				"✓ Infinite Power (Fission Reactor)"
+				"✓ Infinite Resources (Mystical Ag)"
+				"✓ Infinite Crafting (ME Network)"
+				"✓ Unlimited Logistics (P2P Network)"
+				""
+				"&9The journey is complete. The dream is realized.&r"
+			]
+			dependencies: [
+				"2C3D4E5F6A7B8C9D"
+				"3D4E5F6A7B8C9D0E"
+			]
+			size: 3.0d
+			id: "4E5F6A7B8C9D0E1F"
+			tasks: [{
+				id: "5F6A7B8C9D0E1F2A"
+				type: "stat"
+				title: "Achieve Ultimate Victory"
+				stat: "minecraft:play_one_minute"
+				value: 1
+			}]
+			rewards: [
+				{
+					id: "6A7B8C9D0E1F2A3B"
+					type: "item"
+					item: "minecraft:beacon"
+					count: 64
+				}
+				{
+					id: "7B8C9D0E1F2A3B4C"
+					type: "item"
+					item: "mekanism:fission_reactor_port"
+					count: 8
+				}
+				{
+					id: "8C9D0E1F2A3B4C5D"
+					type: "xp_levels"
+					xp_levels: 100
+				}
+			]
+		}
+	]
+}
