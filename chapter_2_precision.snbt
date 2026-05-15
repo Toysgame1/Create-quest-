@@ -1,0 +1,210 @@
+{
+	id: "45AEDCD3B795E95B"
+	group: "331B6409EF6A7840"
+	order_index: 2
+	filename: "chapter_2_precision"
+	title: "&f2&r Precision Manufacturing"
+	icon: "create:brass_ingot"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Chapter 2 Start!"
+			icon: "create:brass_ingot"
+			x: 2.0d
+			y: -1.0d
+			shape: "hexagon"
+			description: [
+				"Now that you have Kinetic Mechanisms, precision machinery awaits!"
+				""
+				"Brass and advanced mechanisms are the next frontier."
+			]
+			dependencies: ["5799D55BB26BA52C"]
+			hide: true
+			size: 2.0d
+			id: "chapter2start"
+			tasks: [{
+				id: "chapter2starttask"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "chapter2reward"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+		}
+		{
+			title: "Brass Production"
+			icon: "create:brass_ingot"
+			x: 1.0d
+			y: 1.0d
+			shape: "square"
+			subtitle: "Contraption 1"
+			description: [
+				"Combine Copper and Zinc in a Melter or Mixer."
+				""
+				"Automate this process for unlimited Brass production."
+			]
+			hide_dependency_lines: true
+			dependencies: ["chapter2start"]
+			id: "brass_production"
+			tasks: [
+				{
+					id: "brass_task"
+					type: "item"
+					item: "create:brass_ingot"
+					consume_items: false
+				}
+				{
+					id: "brass_auto"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Precision Mechanism Crafting"
+			icon: "create:precision_mechanism"
+			x: 3.0d
+			y: 2.0d
+			subtitle: "Contraption 2"
+			description: [
+				"Use Deployers with Brass to craft Precision Mechanisms."
+				""
+				"These unlock all advanced Create machinery!"
+			]
+			dependencies: ["brass_production"]
+			id: "precision_mechanisms"
+			tasks: [
+				{
+					id: "precision_task"
+					type: "item"
+					item: "create:precision_mechanism"
+					consume_items: false
+				}
+				{
+					id: "precision_auto"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Mechanical Crafters Network"
+			icon: "create:mechanical_crafter"
+			x: 5.0d
+			y: 2.5d
+			subtitle: "Contraption 3"
+			description: [
+				"Build a Mechanical Crafters network for recipe automation."
+				""
+				"These are essential for automating any crafting recipe."
+			]
+			dependencies: ["precision_mechanisms"]
+			id: "crafters_network"
+			tasks: [
+				{
+					id: "crafters_task"
+					type: "item"
+					item: "create:mechanical_crafter"
+					count: 8L
+					consume_items: false
+				}
+				{
+					id: "crafters_auto"
+					type: "checkmark"
+					title: "Setup Complete"
+				}
+			]
+		}
+		{
+			title: "Fluid Automation"
+			icon: "create:fluid_pipe"
+			x: 1.0d
+			y: 3.5d
+			subtitle: "Contraption 4"
+			description: [
+				"Build a fluid transport network with pumps and pipes."
+				""
+				"Lava, Water, and other liquids can now be managed automatically."
+			]
+			dependencies: ["precision_mechanisms"]
+			id: "fluid_automation"
+			tasks: [
+				{
+					id: "fluid_task"
+					type: "item"
+					title: "Fluid Pipes"
+					item: "create:fluid_pipe"
+					count: 32L
+					consume_items: false
+				}
+				{
+					id: "fluid_auto"
+					type: "checkmark"
+					title: "Network Built"
+				}
+			]
+		}
+		{
+			title: "Advanced Filtering Systems"
+			icon: "create:filter"
+			x: 3.0d
+			y: 4.5d
+			shape: "circle"
+			subtitle: "Contraption 5"
+			description: [
+				"Set up item filtering with Smart Chutes and Filters."
+				""
+				"Organize your factory with efficient routing systems."
+			]
+			dependencies: [
+				"crafters_network"
+				"fluid_automation"
+			]
+			id: "filtering_systems"
+			tasks: [{
+				id: "filter_task"
+				type: "item"
+				item: "create:smart_chute"
+				consume_items: false
+			}]
+		}
+		{
+			title: "Chapter 2 Complete!"
+			x: 2.0d
+			y: 6.0d
+			shape: "hexagon"
+			description: [
+				"Your factory is now running with precision!"
+				""
+				"Automated crafting, fluid management, and routing are all in place."
+				""
+				"Ready for the next level?"
+			]
+			dependencies: ["filtering_systems"]
+			size: 2.0d
+			id: "chapter2complete"
+			tasks: [{
+				id: "chapter2completask"
+				type: "item"
+				item: "kubejs:brass_machine"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "chapter2reward1"
+					type: "item"
+					item: "create:precision_mechanism"
+					count: 32
+				}
+				{
+					id: "chapter2reward2"
+					type: "item"
+					item: "create:brass_ingot"
+					count: 64
+				}
+			]
+		}
+	]
+}
