@@ -1,0 +1,231 @@
+{
+	id: "45AEDCD3B795E95D"
+	group: "331B6409EF6A7840"
+	order_index: 4
+	filename: "chapter_4_mega_factory"
+	title: "&f4&r Mega Factory"
+	icon: "mekanism:ultimate_cube"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Chapter 4 Start!"
+			icon: "mekanism:ultimate_cube"
+			x: 2.0d
+			y: -1.0d
+			shape: "hexagon"
+			description: [
+				"Time to build a MEGA FACTORY!"
+				""
+				"Mekanism and advanced systems will amplify your production."
+			]
+			dependencies: ["chapter3start"]
+			hide: true
+			size: 2.0d
+			id: "chapter4start"
+			tasks: [{
+				id: "chapter4starttask"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "chapter4reward"
+				type: "item"
+				item: "mekanism:basic_control_circuit"
+				count: 32
+			}]
+		}
+		{
+			title: "Mekanism Ore Processing"
+			icon: "mekanism:enrichment_chamber"
+			x: 0.0d
+			y: 1.5d
+			shape: "square"
+			subtitle: "Contraption 1"
+			description: [
+				"Build an Enrichment Chamber for ore multiplication."
+				""
+				"Double your ore processing efficiency!"
+			]
+			hide_dependency_lines: true
+			dependencies: ["chapter4start"]
+			id: "mek_ore"
+			tasks: [
+				{
+					id: "mek_ore_task"
+					type: "item"
+					item: "mekanism:enrichment_chamber"
+					consume_items: false
+				}
+				{
+					id: "mek_ore_auto"
+					type: "checkmark"
+					title: "Operational"
+				}
+			]
+		}
+		{
+			title: "Advanced Smelting"
+			icon: "mekanism:energized_smelter"
+			x: 2.0d
+			y: 1.5d
+			shape: "square"
+			subtitle: "Contraption 2"
+			description: [
+				"Build an Energized Smelter for rapid ore smelting."
+				""
+				"Process ores 2x faster with electricity."
+			]
+			hide_dependency_lines: true
+			dependencies: ["chapter4start"]
+			id: "mek_smelter"
+			tasks: [
+				{
+					id: "mek_smelter_task"
+					type: "item"
+					item: "mekanism:energized_smelter"
+					consume_items: false
+				}
+				{
+					id: "mek_smelter_auto"
+					type: "checkmark"
+					title: "Running"
+				}
+			]
+		}
+		{
+			title: "Robit Companion"
+			icon: "mekanism:robit"
+			x: 4.0d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "Utility"
+			description: [
+				"Craft a Robit to follow you around the factory."
+				""
+				"They provide portable inventory and teleportation!"
+			]
+			hide_dependency_lines: true
+			dependencies: ["chapter4start"]
+			id: "robit"
+			tasks: [
+				{
+					id: "robit_task"
+					type: "item"
+					item: "mekanism:robit"
+					consume_items: false
+				}
+			]
+		}
+		{
+			title: "Create Ultimate Factory"
+			icon: "create_ultimate_factory:cluster_alloy_smelter"
+			x: 1.0d
+			y: 3.5d
+			subtitle: "Contraption 3"
+			description: [
+				"Build advanced Create machines for massive production."
+				""
+				"These can process tons of materials simultaneously."
+			]
+			dependencies: ["mek_ore"]
+			id: "cuf_machines"
+			tasks: [
+				{
+					id: "cuf_task"
+					type: "item"
+					item: "create_ultimate_factory:cluster_alloy_smelter"
+					consume_items: false
+				}
+				{
+					id: "cuf_auto"
+					type: "checkmark"
+					title: "Set Up"
+				}
+			]
+		}
+		{
+			title: "Power Generation"
+			icon: "mekanism:wind_generator"
+			x: 3.0d
+			y: 3.5d
+			subtitle: "Contraption 4"
+			description: [
+				"Build multiple power generators to fuel your factory."
+				""
+				"Options: Wind, Solar, Thermoelectric, or Fusion!"
+			]
+			dependencies: ["mek_smelter"]
+			id: "power_gen"
+			tasks: [
+				{
+					id: "power_task"
+					type: "item"
+					item: "mekanism:wind_generator"
+					consume_items: false
+				}
+				{
+					id: "power_auto"
+					type: "checkmark"
+					title: "Producing Power"
+				}
+			]
+		}
+		{
+			title: "AE2 Network Integration"
+			icon: "appliedenergistics2:level_maintainer"
+			x: 2.0d
+			y: 5.0d
+			shape: "circle"
+			subtitle: "Contraption 5"
+			description: [
+				"Integrate all your mega machines into your AE2 network."
+				""
+				"Full factory automation is now achieved!"
+			]
+			dependencies: [
+				"cuf_machines"
+				"power_gen"
+			]
+			id: "ae2_integration"
+			tasks: [{
+				id: "integration_task"
+				type: "checkmark"
+				title: "Network Integrated"
+			}]
+		}
+		{
+			title: "Chapter 4 Complete!"
+			x: 2.0d
+			y: 6.5d
+			shape: "hexagon"
+			description: [
+				"You've built a MEGA FACTORY!"
+				""
+				"Mekanism and advanced Create machines work in harmony."
+			]
+			dependencies: ["ae2_integration"]
+			size: 2.0d
+			id: "chapter4complete"
+			tasks: [{
+				id: "chapter4completask"
+				type: "item"
+				item: "mekanism:ultimate_cube"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "chapter4reward1"
+					type: "item"
+					item: "mekanism:advanced_control_circuit"
+					count: 64
+				}
+				{
+					id: "chapter4reward2"
+					type: "item"
+					item: "create_ultimate_factory:cluster_alloy_smelter"
+					count: 2
+				}
+			]
+		}
+	]
+}
