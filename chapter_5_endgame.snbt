@@ -1,0 +1,233 @@
+{
+	id: "45AEDCD3B795E95E"
+	group: "331B6409EF6A7840"
+	order_index: 5
+	filename: "chapter_5_endgame"
+	title: "&f5&r Ultimate Achievement"
+	icon: "mekanism:fusion_reactor_frame"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Chapter 5 Start!"
+			icon: "mekanism:fusion_reactor_frame"
+			x: 2.0d
+			y: -1.0d
+			shape: "hexagon"
+			description: [
+				"The final frontier awaits!"
+				""
+				"Build a Fusion Reactor and reach true industrial supremacy."
+			]
+			dependencies: ["chapter4start"]
+			hide: true
+			size: 2.0d
+			id: "chapter5start"
+			tasks: [{
+				id: "chapter5starttask"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "chapter5reward"
+				type: "item"
+				item: "mekanism:fusion_reactor_port"
+				count: 4
+			}]
+		}
+		{
+			title: "Deuterium & Tritium Production"
+			icon: "mekanism:heavy_water_bucket"
+			x: 0.0d
+			y: 1.5d
+			shape: "square"
+			subtitle: "Contraption 1"
+			description: [
+				"Process water to produce Deuterium and Tritium."
+				""
+				"These are the fuel for your Fusion Reactor."
+			]
+			hide_dependency_lines: true
+			dependencies: ["chapter5start"]
+			id: "fusion_fuel"
+			tasks: [
+				{
+					id: "fuel_task"
+					type: "item"
+					item: "mekanism:deuterium_bucket"
+					consume_items: false
+				}
+				{
+					id: "fuel_auto"
+					type: "checkmark"
+					title: "Fuel Production"
+				}
+			]
+		}
+		{
+			title: "Fusion Reactor Construction"
+			icon: "mekanism:fusion_reactor_controller"
+			x: 2.0d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "Contraption 2"
+			description: [
+				"Build the ultimate power generator: the Fusion Reactor!"
+				""
+				"Generates 5,120,000 FE/t - enough to power anything."
+			]
+			dependencies: ["fusion_fuel"]
+			id: "fusion_reactor"
+			tasks: [
+				{
+					id: "reactor_task"
+					type: "item"
+					item: "mekanism:fusion_reactor_controller"
+					consume_items: false
+				}
+				{
+					id: "reactor_auto"
+					type: "checkmark"
+					title: "Operational"
+				}
+			]
+		}
+		{
+			title: "Quantum Entanglement"
+			icon: "mekanism:quantum_entangloporter"
+			x: 4.0d
+			y: 1.5d
+			shape: "circle"
+			subtitle: "Utility"
+			description: [
+				"Build Quantum Entangloports for instant item/fluid teleportation."
+				""
+				"Connect different parts of your factory wirelessly!"
+			]
+			dependencies: ["fusion_reactor"]
+			id: "quantum_teleport"
+			tasks: [
+				{
+					id: "quantum_task"
+					type: "item"
+					item: "mekanism:quantum_entangloporter"
+					consume_items: false
+				}
+				{
+					id: "quantum_auto"
+				}
+			]
+		}
+		{
+			title: "Mystical Agriculture Supremacy"
+			icon: "mysticalagri:supremium_ingot"
+			x: 1.0d
+			y: 3.5d
+			subtitle: "Contraption 3"
+			description: [
+				"Automate Mystical Agriculture for supremium and essence production."
+				""
+				"Combine with Mekanism for infinite resource generation."
+			]
+			dependencies: ["fusion_fuel"]
+			id: "mystical_supremium"
+			tasks: [
+				{
+					id: "supremium_task"
+					type: "item"
+					item: "mysticalagri:supremium_ingot"
+					consume_items: false
+				}
+				{
+					id: "supremium_auto"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Create Mechanical Extruder"
+			icon: "create_mechanical_extruder:mechanical_extruder"
+			x: 3.0d
+			y: 3.5d
+			subtitle: "Contraption 4"
+			description: [
+				"Use the Mechanical Extruder for advanced material processing."
+				""
+				"Create complex alloys and materials automatically."
+			]
+			dependencies: ["fusion_reactor"]
+			id: "mechanical_extruder"
+			tasks: [
+				{
+					id: "extruder_task"
+					type: "item"
+					item: "create_mechanical_extruder:mechanical_extruder"
+					consume_items: false
+				}
+				{
+					id: "extruder_auto"
+					type: "checkmark"
+					title: "Operational"
+				}
+			]
+		}
+		{
+			title: "AE2 P2P Tunnels"
+			icon: "appliedenergistics2:me_p2p_tunnel"
+			x: 2.0d
+			y: 5.0d
+			shape: "circle"
+			subtitle: "Network Upgrade"
+			description: [
+				"Set up P2P Tunnels for advanced network routing."
+				""
+				"Handle massive data flows across your entire factory."
+			]
+			dependencies: [
+				"mystical_supremium"
+				"mechanical_extruder"
+			]
+			id: "p2p_tunnels"
+			tasks: [{
+				id: "p2p_task"
+				type: "checkmark"
+				title: "Network Upgraded"
+			}]
+		}
+		{
+			title: "THE ULTIMATE FACTORY!"
+			x: 2.0d
+			y: 6.5d
+			shape: "hexagon"
+			description: [
+				"You have achieved manufacturing supremacy!"
+				""
+				"Your factory now produces anything automatically."
+				"Fusion power, quantum teleportation, and infinite resources!"
+				""
+				"The sky is no longer the limit - space awaits! 🚀"
+			]
+			dependencies: ["p2p_tunnels"]
+			size: 2.0d
+			id: "ultimate_achievement"
+			tasks: [{
+				id: "ultimate_task"
+				type: "checkmark"
+				title: "Victory"
+			}]
+			rewards: [
+				{
+					id: "ultimate_reward1"
+					type: "item"
+					item: "mekanism:antimatter"
+					count: 16
+				}
+				{
+					id: "ultimate_reward2"
+					type: "xp_levels"
+					xp_levels: 50
+				}
+			]
+		}
+	]
+}
