@@ -1,0 +1,285 @@
+{
+	id: "8F7A2C4E9D1B5A63"
+	group: "331B6409EF6A7840"
+	order_index: 3
+	filename: "chapter_3_ae2"
+	title: "&f3&r The Digital Age"
+	icon: "appliedenergistics2:me_controller"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Chapter 3 Start!"
+			icon: "create:precision_mechanism"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"Welcome to the Digital Age! Applied Energistics 2 will revolutionize your logistics."
+				""
+				"Your next target: Calculation Mechanisms powered by an ME Network."
+			]
+			dependencies: ["2F6FEDBB1BDCB36C"]
+			hide: true
+			size: 2.0d
+			id: "7A3B9E2C5F8D1E4A"
+			tasks: [{
+				id: "1C2D3E4F5A6B7C8D"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "9E8D7C6B5A4F3E2D"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+		}
+		{
+			title: "ME Network Foundation"
+			icon: "appliedenergistics2:me_controller"
+			x: -3.0d
+			y: 2.0d
+			shape: "square"
+			subtitle: "Contraption 20"
+			description: [
+				"The ME Controller is the brain of your network. Connect ME Cables to expand your system."
+				""
+				"Start small and grow as needed. Power is essential!"
+			]
+			dependencies: ["7A3B9E2C5F8D1E4A"]
+			id: "3C5F7A8B9D2E1F4C"
+			tasks: [
+				{
+					id: "5A6B7C8D9E0F1A2B"
+					type: "item"
+					item: "appliedenergistics2:me_controller"
+					consume_items: false
+				}
+				{
+					id: "7E8F9A0B1C2D3E4F"
+					type: "checkmark"
+					title: "Powered & Functional"
+				}
+			]
+		}
+		{
+			title: "Storage Drives"
+			icon: "appliedenergistics2:me_drive"
+			x: -3.0d
+			y: 4.0d
+			description: [
+				"ME Drives store items in digital form. Install ME Storage Cells into them."
+				""
+				"Start with 64k cells and upgrade as your inventory grows."
+			]
+			dependencies: ["3C5F7A8B9D2E1F4C"]
+			id: "4D6E7F8A9B0C1D2E"
+			tasks: [
+				{
+					id: "6F7A8B9C0D1E2F3A"
+					type: "item"
+					item: "appliedenergistics2:me_drive"
+					consume_items: false
+				}
+				{
+					id: "8A9B0C1D2E3F4A5B"
+					type: "checkmark"
+					title: "Installed"
+				}
+			]
+		}
+		{
+			title: "Import & Export Buses"
+			icon: "appliedenergistics2:import_bus"
+			x: -1.0d
+			y: 2.0d
+			subtitle: "Contraption 21"
+			description: [
+				"Import Buses pull items FROM chests/machines INTO your ME Network."
+				"Export Buses push items FROM your network INTO adjacent containers."
+				""
+				"Use filters to control what gets imported/exported."
+			]
+			dependencies: ["7A3B9E2C5F8D1E4A"]
+			id: "2F4A6B7C8D9E0F1A"
+			tasks: [
+				{
+					id: "4A5B6C7D8E9F0A1B"
+					type: "item"
+					item: "appliedenergistics2:import_bus"
+					consume_items: false
+				}
+				{
+					id: "5B6C7D8E9F0A1B2C"
+					type: "item"
+					item: "appliedenergistics2:export_bus"
+					consume_items: false
+				}
+				{
+					id: "6C7D8E9F0A1B2C3D"
+					type: "checkmark"
+					title: "Connected"
+				}
+			]
+		}
+		{
+			title: "ME Terminal Access"
+			icon: "appliedenergistics2:me_terminal"
+			x: -5.0d
+			y: 4.0d
+			shape: "circle"
+			description: [
+				"The ME Terminal gives you access to all stored items."
+				""
+				"You can craft, search, and organize your digital inventory from here."
+			]
+			dependencies: ["4D6E7F8A9B0C1D2E"]
+			id: "7A8B9C0D1E2F3A4B"
+			tasks: [{
+				id: "8B9C0D1E2F3A4B5C"
+				type: "item"
+				item: "appliedenergistics2:me_terminal"
+				consume_items: false
+			}]
+		}
+		{
+			title: "Silicone Production"
+			icon: "appliedenergistics2:silicon"
+			x: 1.0d
+			y: 2.0d
+			subtitle: "Contraption 22"
+			description: [
+				"Silicon is crafted from Sand using a Press with specific recipes."
+				""
+				"Automate this using Deployers and Mechanical Presses."
+			]
+			dependencies: ["7A3B9E2C5F8D1E4A"]
+			id: "9D0E1F2A3B4C5D6E"
+			tasks: [
+				{
+					id: "0E1F2A3B4C5D6E7F"
+					type: "item"
+					item: "appliedenergistics2:silicon"
+					consume_items: false
+				}
+				{
+					id: "1F2A3B4C5D6E7F8A"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "P2P Tunnels Setup"
+			icon: "appliedenergistics2:me_p2p_tunnel"
+			x: 3.0d
+			y: 2.0d
+			shape: "circle"
+			description: [
+				"P2P Tunnels allow you to condense your ME network cables."
+				""
+				"Perfect for organizing complex networks without cable spaghetti."
+			]
+			dependencies: ["2F4A6B7C8D9E0F1A"]
+			id: "1B2C3D4E5F6A7B8C"
+			tasks: [{
+				id: "2C3D4E5F6A7B8C9D"
+				type: "item"
+				item: "appliedenergistics2:me_p2p_tunnel"
+				consume_items: false
+			}]
+		}
+		{
+			title: "Molecular Assembler"
+			icon: "appliedenergistics2:molecular_assembler"
+			x: -1.0d
+			y: 6.0d
+			shape: "square"
+			subtitle: "Contraption 23"
+			description: [
+				"The Molecular Assembler crafts items directly from ME patterns."
+				""
+				"Use Blank Patterns to create custom recipes for automation."
+			]
+			dependencies: [
+				"4D6E7F8A9B0C1D2E"
+				"2F4A6B7C8D9E0F1A"
+			]
+			id: "3D4E5F6A7B8C9D0E"
+			tasks: [
+				{
+					id: "4E5F6A7B8C9D0E1F"
+					type: "item"
+					item: "appliedenergistics2:molecular_assembler"
+					consume_items: false
+				}
+				{
+					id: "5F6A7B8C9D0E1F2A"
+					type: "checkmark"
+					title: "Functional"
+				}
+			]
+		}
+		{
+			title: "Calculation Mechanism Assembly"
+			icon: "kubejs:calculation_mechanism"
+			x: -1.0d
+			y: 9.0d
+			shape: "hexagon"
+			description: [
+				"With AE2 fully integrated, craft Calculation Mechanisms using the Molecular Assembler."
+				""
+				"These are your gateway to the final chapter!"
+			]
+			dependencies: ["3D4E5F6A7B8C9D0E"]
+			size: 2.0d
+			id: "5E6F7A8B9C0D1E2F"
+			tasks: [
+				{
+					id: "6F7A8B9C0D1E2F3A"
+					type: "item"
+					item: "kubejs:calculation_mechanism"
+					consume_items: false
+				}
+				{
+					id: "7A8B9C0D1E2F3A4B"
+					type: "checkmark"
+					title: "Automated"
+				}
+			]
+		}
+		{
+			title: "Chapter 3 Complete!"
+			x: -1.0d
+			y: 11.0d
+			shape: "hexagon"
+			description: [
+				"Congratulations! Your ME Network is fully operational."
+				""
+				"You now have access to instant crafting and organized storage. The digital revolution is complete!"
+			]
+			dependencies: ["5E6F7A8B9C0D1E2F"]
+			size: 2.0d
+			id: "7F8A9B0C1D2E3F4A"
+			tasks: [{
+				id: "8A9B0C1D2E3F4A5B"
+				type: "item"
+				item: "kubejs:inductive_mechanism"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "9B0C1D2E3F4A5B6C"
+					type: "item"
+					item: "kubejs:calculation_mechanism"
+					count: 32
+				}
+				{
+					id: "0C1D2E3F4A5B6C7D"
+					type: "item"
+					item: "appliedenergistics2:certus_quartz_crystal"
+					random_bonus: 8
+				}
+			]
+		}
+	]
+}
