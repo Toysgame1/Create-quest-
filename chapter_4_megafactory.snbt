@@ -1,0 +1,262 @@
+{
+	id: "2A3B4C5D6E7F8A9B"
+	group: "331B6409EF6A7840"
+	order_index: 4
+	filename: "chapter_4_megafactory"
+	title: "&f4&r Mega Factory Operations"
+	icon: "mekanism:enrichment_chamber"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			title: "Chapter 4 Start!"
+			icon: "kubejs:calculation_mechanism"
+			x: 0.0d
+			y: 0.0d
+			shape: "hexagon"
+			description: [
+				"Welcome to industrial scale production!"
+				""
+				"Mekanism and Create Ultimate Factory will push your automation to new heights."
+			]
+			dependencies: ["74CFD83C501C4952"]
+			hide: true
+			size: 2.0d
+			id: "3B4C5D6E7F8A9B0C"
+			tasks: [{
+				id: "4C5D6E7F8A9B0C1D"
+				type: "checkmark"
+			}]
+			rewards: [{
+				id: "5D6E7F8A9B0C1D2E"
+				type: "item"
+				item: "create:builders_tea"
+			}]
+		}
+		{
+			title: "Mekanism Enrichment"
+			icon: "mekanism:enrichment_chamber"
+			x: -3.0d
+			y: 2.0d
+			shape: "square"
+			subtitle: "Contraption 24"
+			description: [
+				"The Enrichment Chamber processes ores into enriched ore dust."
+				""
+				"This is 2x faster and more efficient than furnaces."
+			]
+			dependencies: ["3B4C5D6E7F8A9B0C"]
+			id: "4C5D6E7F8A9B0C1D"
+			tasks: [
+				{
+					id: "5D6E7F8A9B0C1D2E"
+					type: "item"
+					item: "mekanism:enrichment_chamber"
+					consume_items: false
+				}
+				{
+					id: "6E7F8A9B0C1D2E3F"
+					type: "checkmark"
+					title: "Powered"
+				}
+			]
+		}
+		{
+			title: "Mekanism Smelting"
+			icon: "mekanism:energized_smelter"
+			x: -3.0d
+			y: 4.0d
+			description: [
+				"The Energized Smelter converts enriched ore dust into ingots."
+				""
+				"Far more power-efficient than creating ingots from raw ore."
+			]
+			dependencies: ["4C5D6E7F8A9B0C1D"]
+			id: "5D6E7F8A9B0C1D2E"
+			tasks: [
+				{
+					id: "6E7F8A9B0C1D2E3F"
+					type: "item"
+					item: "mekanism:energized_smelter"
+					consume_items: false
+				}
+				{
+					id: "7F8A9B0C1D2E3F4A"
+					type: "checkmark"
+					title: "Configured"
+				}
+			]
+		}
+		{
+			title: "Ultimate Factory Smelter"
+			icon: "create_ultimate_factory:smelting_factory"
+			x: -1.0d
+			y: 2.0d
+			subtitle: "Contraption 25"
+			description: [
+				"The Ultimate Factory smelting module handles large quantities."
+				""
+				"Use item filters to process multiple ore types simultaneously."
+			]
+			dependencies: ["3B4C5D6E7F8A9B0C"]
+			id: "6E7F8A9B0C1D2E3F"
+			tasks: [
+				{
+					id: "7F8A9B0C1D2E3F4A"
+					type: "item"
+					item: "create_ultimate_factory:smelting_factory"
+					consume_items: false
+				}
+				{
+					id: "8A9B0C1D2E3F4A5B"
+					type: "checkmark"
+					title: "Running"
+				}
+			]
+		}
+		{
+			title: "Power Generation: Thermalpiles"
+			icon: "thermal:machine_furnace"
+			x: 1.0d
+			y: 2.0d
+			shape: "circle"
+			description: [
+				"Thermalpiles convert heat into RF energy."
+				""
+				"Combine with lava sources for sustainable power generation."
+			]
+			dependencies: ["3B4C5D6E7F8A9B0C"]
+			id: "7F8A9B0C1D2E3F4A"
+			tasks: [
+				{
+					id: "8A9B0C1D2E3F4A5B"
+					type: "item"
+					item: "thermal:machine_furnace"
+					consume_items: false
+				}
+				{
+					id: "9B0C1D2E3F4A5B6C"
+					type: "checkmark"
+					title: "Generating"
+				}
+			]
+		}
+		{
+			title: "Mystical Agriculture Fusion"
+			icon: "mysticalagriculture:prosperity_seed"
+			x: 3.0d
+			y: 2.0d
+			subtitle: "Contraption 26"
+			description: [
+				"Mystical Agriculture grows valuable ores and materials."
+				""
+				"Use Essence to craft supremium seeds for infinite resources."
+			]
+			dependencies: ["3B4C5D6E7F8A9B0C"]
+			id: "8A9B0C1D2E3F4A5B"
+			tasks: [
+				{
+					id: "9B0C1D2E3F4A5B6C"
+					type: "item"
+					item: "mysticalagriculture:prosperity_seed"
+					consume_items: false
+				}
+				{
+					id: "0C1D2E3F4A5B6C7D"
+					type: "checkmark"
+					title: "Growing"
+				}
+			]
+		}
+		{
+			title: "AE2 Integration with Factories"
+			icon: "appliedenergistics2:export_bus"
+			x: -1.0d
+			y: 6.0d
+			shape: "square"
+			description: [
+				"Connect Export Buses to feed your factory machines."
+				"Connect Import Buses to collect finished products."
+				""
+				"Your ME Network becomes the command center!"
+			]
+			dependencies: [
+				"5D6E7F8A9B0C1D2E"
+				"6E7F8A9B0C1D2E3F"
+			]
+			id: "9B0C1D2E3F4A5B6C"
+			tasks: [{
+				id: "0C1D2E3F4A5B6C7D"
+				type: "checkmark"
+				title: "Integrated"
+			}]
+		}
+		{
+			title: "Mega Production Complete"
+			x: -1.0d
+			y: 9.0d
+			shape: "hexagon"
+			description: [
+				"Your factory now produces materials at massive scales!"
+				""
+				"Bottlenecks are a thing of the past. Your ME Network is keeping up with demand."
+			]
+			dependencies: ["9B0C1D2E3F4A5B6C"]
+			size: 2.0d
+			id: "0C1D2E3F4A5B6C7D"
+			tasks: [{
+				id: "1D2E3F4A5B6C7D8E"
+				type: "item"
+				item: "create_ultimate_factory:smelting_factory"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "2E3F4A5B6C7D8E9F"
+					type: "item"
+					item: "mekanism:enrichment_chamber"
+					count: 4
+				}
+				{
+					id: "3F4A5B6C7D8E9F0A"
+					type: "item"
+					item: "mysticalagriculture:prosperity_seed"
+					count: 16
+				}
+			]
+		}
+		{
+			title: "Chapter 4 Complete!"
+			x: -1.0d
+			y: 11.0d
+			shape: "hexagon"
+			description: [
+				"You have achieved mega-factory status!"
+				""
+				"Industrial production combined with digital logistics = unstoppable progress."
+			]
+			dependencies: ["0C1D2E3F4A5B6C7D"]
+			size: 2.0d
+			id: "1D2E3F4A5B6C7D8E"
+			tasks: [{
+				id: "2E3F4A5B6C7D8E9F"
+				type: "item"
+				item: "kubejs:calculation_mechanism"
+				consume_items: false
+			}]
+			rewards: [
+				{
+					id: "3F4A5B6C7D8E9F0A"
+					type: "item"
+					item: "mekanism:energized_smelter"
+					count: 2
+				}
+				{
+					id: "4A5B6C7D8E9F0A1B"
+					type: "xp_levels"
+					xp_levels: 10
+				}
+			]
+		}
+	]
+}
